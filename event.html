@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poornima University Alumni Society</title>
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <!-- Replace with your actual logo file -->
+            <img src="ic_PUAS_full (1).png" alt="Poornima University Logo"> 
+        </div>
+        <!-- NEW: Theme Toggle Button -->
+        <button id="theme-toggle" title="Toggle dark mode">
+            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+            <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="alumni-nav">
+        <ul>
+            <li><a href="#home-content" class="active">Home</a></li>
+            <li><a href="#committee-content">Executive Committee</a></li>
+            <li><a href="#meet-content">Alumni Meet</a></li>
+            <li><a href="#contact-content">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Home Section (includes Overview) -->
+        <section id="home-content" class="page-section">
+            <!-- Hero Banner / Image Slider Section -->
+            <div class="hero">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="mask.webp" alt="Alumni Meet" class="hero-img">
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="standing.jpeg" alt="Another Alumni Photo" class="hero-img">
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="Screenshot_20250109-174705 (1).png" alt="Alumni Event" class="hero-img">
+                </div>
+                <!-- Slider navigation buttons -->
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+
+            <!-- Alumni Society Main Heading -->
+            <div class="alumni-heading">
+                <h1>Poornima University Alumni Society</h1>
+            </div>
+
+            <!-- Alumni Society Overview Section -->
+            <div class="overview">
+                <div class="overview-container">
+                     <!-- Image Column -->
+                     <div class="overview-image">
+                        <img src="cover-alumini.webp" alt="Poornima University Alumni Legacy">
+                    </div>
+                    <!-- Text Column -->
+                    <div class="overview-text">
+                         <h2>Overview</h2>
+                        <p>
+                            At Poornima University, we take pride in the lasting impact and accomplishments of our distinguished alumni, which serve as a tribute to our triumph and unwavering determination. Our former student has played a crucial role in the enlightenment and strengthening of Poornima, serving as a source of support via their exceptional accomplishments.
+                        </p>
+                        <p>
+                            The Alumni Association functions as a conduit, uniting tenuous relationships and establishing fresh connections through its devoted alumni division. By establishing these linkages, Poornima University has achieved fame and significance on a global scale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Executive Committee Section -->
+        <section id="committee-content" class="page-section">
+            <div class="events">
+                <h2>Executive Committee</h2>
+                <div class="event-grid">
+                    <!-- Card 1 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+1" alt="Photo of Shiv Kumar">
+                        <div class="card-info">
+                            <h3>Shubham Jagetia</h3>
+                            <p>President</p>
+                        </div>
+                        <div class="card-details">
+                            <p>Shiv Kumar is a foundational member of the alumni society, dedicated to fostering a strong and supportive community among graduates.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="26.webp" alt="Photo of Dr. Rakesh Gupta">
+                        <div class="card-info">
+                            <h3>Dr. Rakesh Gupta</h3>
+                            <p>Secretary</p>
+                        </div>
+                        <div class="card-details">
+                            <p>Dr. Gupta manages the society's communications and official records, ensuring smooth and transparent operations. He is the primary point of contact for all official matters.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+3" alt="Photo of Jitendra Kumar">
+                        <div class="card-info">
+                            <h3>Jitendra Kumar</h3>
+                            <p>Secretary</p>
+                        </div>
+                        <div class="card-details">
+                           <p>Jitendra Kumar oversees the financial activities and health of the alumni society, managing budgets and ensuring long-term sustainability.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+4" alt="Photo of Pallavi verma">
+                        <div class="card-info">
+                            <h3>Pallavi Verma</h3>
+                            <p>Member</p>
+                        </div>
+                        <div class="card-details">
+                            <p>Pallavi is responsible for the society's financial planning and records. Her expertise ensures the transparent and effective management of funds.</p>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+5" alt="Photo of Rajesh Verma">
+                        <div class="card-info">
+                            <h3>Anmol Chaturvedi</h3>
+                            <p>Member</p>
+                        </div>
+                        <div class="card-details">
+                            <p>contributes to the strategic direction and planning of alumni events and initiatives, helping to shape the future of the society.</p>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+6" alt="Photo of Priya Singh">
+                        <div class="card-info">
+                            <h3>Shiv kumar</h3>
+                            <p>Coordinator</p>
+                        </div>
+                        <div class="card-details">
+                            <p>Priya Singh plays a key role in organizing and executing alumni gatherings and networking events, ensuring each one is a memorable success.</p>
+                        </div>
+                    </div>
+                     <!-- Card 7 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+7" alt="Photo of Sanjay Meena">
+                        <div class="card-info">
+                            <h3>saurab trehan</h3>
+                            <p>Outreach Officer</p>
+                        </div>
+                        <div class="card-details">
+                            <p>focuses on outreach and engagement, working to connect with alumni across different batches and geographies to grow the network.</p>
+                        </div>
+                    </div>
+                     <!-- Card 8 -->
+                    <div class="event-card">
+                        <span class="card-close-button">&times;</span>
+                        <img src="https://placehold.co/300x300/e8e8e8/333?text=Person+8" alt="Photo of Deepika Jain">
+                        <div class="card-info">
+                            <h3>Vanshaj pradhan</h3>
+                            <p>Chair</p>
+                        </div>
+                        <div class="card-details">
+                           <p>Deepika Jain manages the society's digital presence, including the website and social media, keeping alumni informed and connected.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alumni Meet Section -->
+        <section id="meet-content" class="page-section">
+            <div class="overview">
+                 <h2>Alumni Meet Details</h2>
+                 <p>Information about past and future alumni meets will go here. Stay tuned for updates on our next grand event!</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-content" class="page-section">
+            <div class="overview">
+                <h2>Contact the Alumni Society</h2>
+                <p>For any inquiries, please feel free to reach out to us.</p>
+                <p><strong>Email:</strong> alumni@poornima.edu.in</p>
+                <p><strong>Phone:</strong> +91-8875666618</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay"></div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
