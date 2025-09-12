@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Part 3: Animate Headings on Scroll ---
+    // --- Part 3: Animate Headings on Scroll (Legacy Support) ---
     const headings = document.querySelectorAll('.alumni-heading h1, .overview-text h2, .events h2');
     const headingObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -96,7 +96,46 @@ document.addEventListener('DOMContentLoaded', () => {
         headingObserver.observe(heading);
     });
 
-    // --- Part 4: Scroll-Spy Navigation Logic ---
+    // --- Part 4: Modern Animate on Scroll for New Elements ---
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const animateObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    animateElements.forEach(element => {
+        animateObserver.observe(element);
+    });
+
+    // --- Part 5: Header and Navigation Scroll Effects ---
+    const header = document.getElementById('main-header');
+    const nav = document.querySelector('.alumni-nav');
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        // Header scroll effect
+        if (scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Navigation scroll effect - this is the key addition!
+        if (scrollY > 200) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+
+    // --- Part 6: Scroll-Spy Navigation Logic ---
     const navLinks = document.querySelectorAll('.alumni-nav a');
     const pageSections = document.querySelectorAll('.page-section');
 
@@ -109,13 +148,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
+    // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+            
             updateActiveLink(targetId);
         });
     });
 
+    // Section visibility observer for nav updates
     const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -126,40 +177,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -79% 0px' });
 
     pageSections.forEach(section => {
-        scrollObserver.observe(section);
-    });
-
-    // --- Part 5: Theme Toggle Logic ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const sunIcon = themeToggle.querySelector('.sun');
-    const moonIcon = themeToggle.querySelector('.moon');
-
-    const setTheme = (theme) => {
-        if (theme === 'dark') {
-            document.body.classList.add('dark-theme');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.remove('dark-theme');
-            localStorage.setItem('theme', 'light');
-        }
-    };
-
-    themeToggle.addEventListener('click', () => {
-        const isDarkMode = document.body.classList.contains('dark-theme');
-        setTheme(isDarkMode ? 'light' : 'dark');
-    });
-
-    // On page load, check for saved theme
-    const savedTheme = localStorage.getItem('theme');
-    // Also check user's system preference if no theme is saved
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme) {
-        setTheme(savedTheme);
-    } else if (prefersDark) {
-        setTheme('dark');
-    } else {
-        setTheme('light');
-    }
-});
-
+        scrollObserver.observe
