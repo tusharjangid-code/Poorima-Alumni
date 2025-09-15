@@ -1,3 +1,4 @@
+
 // This ensures that the page scrolls to the top on refresh, preventing it from jumping to a section.
 if (history.scrollRestoration) {
     history.scrollRestoration = 'manual';
