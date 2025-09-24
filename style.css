@@ -2958,3 +2958,51 @@
   }
   
   .alumni-meet-btn {
+    .card-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+  line-height: 1;
+  font-family: Arial, sans-serif;
+}
+
+.card-close-button:hover {
+  background: rgba(220, 38, 38, 0.9);
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+}
+
+/* Show close button when card is expanded */
+.event-card.expanded .card-close-button {
+  display: flex;
+}
+
+/* Ensure the event card has relative positioning for absolute positioning of close button */
+.event-card {
+  position: relative;
+}
+/* Add this to the bottom of your style.css file */
+
+@media (max-width: 767px) {
+  /* This ensures the close button is visible on mobile */
+  .close-button {
+    display: block !important; /* or inline-block */
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important; /* Make sure it's on top of other elements */
+  }
+}
