@@ -237,99 +237,364 @@
 </div>
     </section>
 
-    <section id="meet-content" class="page-section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Alumni Meet</h2>
-        <p class="section-subtitle">Stay connected with your alma mater through our exciting events and gatherings</p>
+   <!-- Replace your existing Alumni Meet section with this updated version -->
+<!-- Alumni Meet Section - Replace your existing #meet-content section with this -->
+<section id="meet-content" class="page-section">
+  <div class="section-header animate-on-scroll">
+    <h2 class="section-title">Alumni Meet</h2>
+    <p class="section-subtitle">Stay connected with your alma mater through our exciting events and gatherings</p>
+  </div>
+
+  <div class="alumni-meet-grid">
+    <!-- Photo Gallery Card -->
+    <div class="alumni-meet-card glass animate-on-scroll" id="photoGalleryCard">
+      <div class="alumni-meet-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21,15 16,10 5,21"/>
+        </svg>
       </div>
-      
-      <div class="meet-grid">
-        <div class="meet-card glass animate-on-scroll">
-          <div class="meet-icon">
-            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M8 2v4"/>
-              <path d="M16 2v4"/>
-              <rect width="18" height="18" x="3" y="4" rx="2"/>
-              <path d="M3 10h18"/>
-              <path d="M8 14h.01"/>
-              <path d="M12 14h.01"/>
-              <path d="M16 14h.01"/>
-            </svg>
+      <div class="alumni-card-content">
+        <h3>Photo Gallery</h3>
+        <p>Explore memories from our past alumni meets, events, and celebrations. Browse through our complete photo collection.</p>
+        
+        <div class="alumni-gallery-preview">
+          <div class="alumni-preview-images">
+            <img src="mask.webp" alt="Alumni event preview" />
+            <img src="standing.jpeg" alt="Alumni group preview" />
+            <img src="Screenshot_20250109-174705 (1).png" alt="Alumni celebration preview" />
           </div>
-          <h3>Annual Grand Meet</h3>
-          <p>Join us for our flagship annual event where alumni from all batches come together to celebrate achievements, network, and create lasting memories.</p>
+          <div class="alumni-view-more">+12 more photos</div>
         </div>
         
-        <div class="meet-card glass animate-on-scroll">
-          <div class="meet-icon">
-            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
-              <rect width="8" height="4" x="8" y="2" rx="1"/>
-            </svg>
+        <button class="alumni-meet-btn" data-action="gallery">VIEW GALLERY</button>
+      </div>
+    </div>
+
+    <!-- Professional Workshops Card -->
+    <div class="alumni-meet-card glass animate-on-scroll">
+      <div class="alumni-meet-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+          <rect width="8" height="4" x="8" y="2" rx="1"/>
+        </svg>
+      </div>
+      <div class="alumni-card-content">
+        <h3>Professional Workshops</h3>
+        <p>Enhance your skills with industry-specific workshops led by successful alumni experts in various fields.</p>
+        
+        <div class="alumni-workshop-info">
+          <div class="alumni-info-item">
+            <span class="alumni-info-label">Next Workshop:</span>
+            <span class="alumni-info-value">soon in Sept</span>
           </div>
-          <h3>Professional Workshops</h3>
-          <p>Enhance your skills with industry-specific workshops led by successful alumni experts in various fields.</p>
+          <div class="alumni-info-item">
+            <span class="alumni-info-label">Topic:</span>
+            <span class="alumni-info-value">To be Decided</span>
+          </div>
         </div>
         
-        <div class="meet-card glass animate-on-scroll">
-          <div class="meet-icon">
-            <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-              <path d="M12 17h.01"/>
+        <button class="alumni-meet-btn" data-action="workshop">REGISTER NOW</button>
+      </div>
+    </div>
+
+    <!-- Event After Movie Card -->
+    <div class="alumni-meet-card glass animate-on-scroll">
+      <div class="alumni-meet-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+      </div>
+      <div class="alumni-card-content">
+        <h3>Event After Movie</h3>
+        <p>Relive the highlights and memorable moments from our latest alumni meet. Watch the complete event recap.</p>
+        
+        <div class="alumni-video-preview">
+          <img src="thumbnail.jpg" alt="After Movie Thumbnail" />
+          <div class="alumni-play-overlay">
+            <svg width="25" height="25" viewBox="0 0 24 24" fill="white">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
           </div>
-          <h3>Mentorship Programs</h3>
-          <p>Connect with experienced alumni mentors who can guide your career growth and professional development.</p>
+        </div>
+        
+        <button class="alumni-meet-btn" data-action="video">WATCH NOW</button>
+      </div>
+    </div>
+
+    <!-- Networking Events Card -->
+    <div class="alumni-meet-card glass animate-on-scroll">
+      <div class="alumni-meet-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="alumni-card-content">
+        <h3>Networking Events</h3>
+        <p>Connect with fellow alumni across different industries and build meaningful professional relationships.</p>
+        
+        <div class="alumni-network-stats">
+          <div class="alumni-stat">
+            <span class="alumni-stat-number">500+</span>
+            <span class="alumni-stat-label">Alumni Connected</span>
+          </div>
+          <div class="alumni-stat">
+            <span class="alumni-stat-number">50+</span>
+            <span class="alumni-stat-label">Industries</span>
+          </div>
+        </div>
+        
+        <button class="alumni-meet-btn" data-action="network">JOIN NETWORK</button>
+      </div>
+    </div>
+
+    <!-- Upcoming Events Card - Featured -->
+    <div class="alumni-meet-card glass animate-on-scroll alumni-featured-card">
+      <div class="alumni-meet-icon alumni-featured-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+          <line x1="16" y1="2" x2="16" y2="6"/>
+          <line x1="8" y1="2" x2="8" y2="6"/>
+          <line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <div class="alumni-card-content">
+        <h3>Upcoming Events</h3>
+        <p>Don't miss our upcoming alumni gatherings, reunions, and special celebrations. Mark your calendars!</p>
+        
+        <div class="alumni-event-highlight">
+          <div class="alumni-event-date">
+            <span class="alumni-date-day">Soon</span>
+            <span class="alumni-date-month">will be published</span>
+          </div>
+          <div class="alumni-event-details">
+            <h4>Annual Alumni Reunion 2025</h4>
+            <p>Grand celebration at university campus</p>
+          </div>
+        </div>
+        
+        <button class="alumni-meet-btn alumni-featured-btn" data-action="events">VIEW ALL EVENTS</button>
+      </div>
+    </div>
+
+    <!-- Alumni Stories Card -->
+    <div class="alumni-meet-card glass animate-on-scroll">
+      <div class="alumni-meet-icon">
+        <svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14,2 14,8 20,8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+        </svg>
+      </div>
+      <div class="alumni-card-content">
+        <h3>Alumni Stories</h3>
+        <p>Read inspiring success stories and career journeys of our distinguished alumni making a difference worldwide.</p>
+        
+        <div class="alumni-stories-preview">
+          <div class="alumni-story-item">
+            <span class="alumni-story-title">"From Campus to CEO"</span>
+            <span class="alumni-story-author"> Yet to be published</span>
+          </div>
+        </div>
+        
+        <button class="alumni-meet-btn" data-action="stories">READ STORIES</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Elements Container -->
+  <div class="alumni-interactive-container">
+    <!-- Photo Gallery Modal -->
+    <div id="alumniGalleryModal" class="alumni-interactive-element">
+      <div class="alumni-element-header">
+        <h3>Alumni Photo Gallery</h3>
+        <button class="alumni-close-interactive" data-target="alumniGalleryModal">&times;</button>
+      </div>
+      <div class="alumni-gallery-content">
+        <div id="alumniMainDisplay" class="alumni-main-display">
+          <img src="mask.webp" alt="Alumni event" id="alumniMainImage" />
+          <div class="alumni-image-controls">
+            <button id="alumniPrevImage" class="alumni-control-btn">&#10094;</button>
+            <button id="alumniNextImage" class="alumni-control-btn">&#10095;</button>
+          </div>
+        </div>
+        <div class="alumni-thumbnail-strip">
+          <div class="alumni-thumbnail active" data-src="mask.webp">
+            <img src="mask.webp" alt="Event 1" />
+          </div>
+          <div class="alumni-thumbnail" data-src="standing.jpeg">
+            <img src="standing.jpeg" alt="Event 2" />
+          </div>
+          <div class="alumni-thumbnail" data-src="Screenshot_20250109-174705 (1).png">
+            <img src="Screenshot_20250109-174705 (1).png" alt="Event 3" />
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="alumniVideoModal" class="alumni-interactive-element">
+      <div class="alumni-element-header">
+        <h3>Alumni Meet After Movie</h3>
+        <button class="alumni-close-interactive" data-target="alumniVideoModal">&times;</button>
+      </div>
+      <div class="alumni-video-content">
+        <div class="alumni-video-wrapper">
+          <iframe 
+            id="alumniVideoFrame"
+            src=""
+            width="100%" 
+            height="400"
+            frameborder="0" 
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="contact-content" class="page-section">
-      <div class="section-header animate-on-scroll">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Ready to reconnect? We'd love to hear from you</p>
+  <div class="section-header animate-on-scroll">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-subtitle">Ready to reconnect? We'd love to hear from you</p>
+  </div>
+  
+  <div class="contact-grid">
+    <!-- Email Card -->
+    <div class="contact-card animate-on-scroll" id="emailCard">
+      <div class="contact-icon">
+        <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
       </div>
-      
-      <div class="contact-grid">
-        <div class="contact-card animate-on-scroll">
-          <div class="contact-icon">
-            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
+      <h3>Email</h3>
+      <p>alumni@poornima.edu.in</p>
+      <button class="contact-btn" data-action="email">SEND MESSAGE</button>
+    </div>  
+    
+    <!-- Phone Card -->
+    <div class="contact-card animate-on-scroll">
+      <div class="contact-icon">
+        <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+      </div>
+      <h3>Phone</h3>
+      <p>+91 9799546261</p>
+      <button class="contact-btn" data-action="phone">CALL NOW</button>
+    </div>
+    
+    <!-- Address Card -->
+    <div class="contact-card animate-on-scroll" id="addressCard">
+      <div class="contact-icon">
+        <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h3>Address</h3>
+      <p>Poornima University<br>IS-2027, Ramchandrapura<br>Jaipur, Rajasthan 302022</p>
+      <button class="contact-btn" data-action="map">VIEW ON MAP</button>
+    </div>
+  </div>
+  
+  <!-- Interactive Elements Container -->
+  <div class="contact-interactive-container">
+    <!-- Google Form Container -->
+    <div id="googleFormContainer" class="interactive-element">
+      <div class="element-header">
+        <h3>Send us a Message</h3>
+        <button class="close-interactive" data-target="googleFormContainer">&times;</button>
+      </div>
+      <div class="form-wrapper">
+        <iframe 
+          id="googleFormFrame"
+          src=""
+          width="100%" 
+          height="600"
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          loading="lazy">
+          Loading...
+        </iframe>
+      </div>
+    </div>
+    
+    <!-- Map Container -->
+    <div id="mapContainer" class="interactive-element">
+      <div class="element-header">
+        <h3>Find Us Here</h3>
+        <button class="close-interactive" data-target="mapContainer">&times;</button>
+      </div>
+      <div class="map-wrapper">
+        <iframe 
+          id="mapFrame"
+          src=""
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-overlay">
+          <div class="address-info">
+            <h4>Poornima University Alumni Society</h4>
+            <p>IS-2027, Ramchandrapura, Jaipur, Rajasthan 302022, India</p>
+            <div class="quick-actions">
+              <button class="quick-action-btn" id="getDirections">Get Directions</button>
+              <button class="quick-action-btn" id="viewLargerMap">View Larger Map</button>
+            </div>
           </div>
-          <h3>Email</h3>
-          <p>alumni@poornima.edu.in</p>
-        </div>
-        
-        <div class="contact-card animate-on-scroll">
-          <div class="contact-icon">
-            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </div>
-          <h3>Phone</h3>
-          <p>+91-8875666618</p>
-        </div>
-        
-        <div class="contact-card animate-on-scroll">
-          <div class="contact-icon">
-            <svg width="30" height="30" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </div>
-          <h3>Address</h3>
-          <p>Poornima University<br>Jaipur, Rajasthan</p>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  </main>
-
-  <div class="modal-overlay"></div>
-
+<!-- Enhanced Contact Modal -->
+<div id="contactModal" class="contact-modal-overlay">
+  <div class="contact-modal-content">
+    <div class="modal-header">
+      <h2>Get In Touch</h2>
+      <span class="contact-close-button">&times;</span>
+    </div>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" id="userName" placeholder=" " required>
+        <label for="userName">Your Name</label>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" id="userEmail" placeholder=" " required>
+        <label for="userEmail">Email Address</label>
+      </div>
+      <div class="form-group">
+        <input type="text" name="subject" id="userSubject" placeholder=" " required>
+        <label for="userSubject">Subject</label>
+      </div>
+      <div class="form-group">
+        <textarea name="message" id="userMessage" rows="5" placeholder=" " required></textarea>
+        <label for="userMessage">Your Message</label>
+      </div>
+      <button type="submit" class="submit-btn">
+        <span class="btn-text">Send Message</span>
+        <span class="btn-loading">Sending...</span>
+        <svg class="btn-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
   <script src="script.js"></script>
 
   <script>
@@ -533,6 +798,23 @@
         observer.observe(statsSection);
       }
     });
+    const modal = document.getElementById("contactModal");
+    const emailCard = document.getElementById("emailCard");
+    const closeButton = document.querySelector(".close-button");
+
+    emailCard.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    closeButton.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
   </script>
 </body>
 </html>
