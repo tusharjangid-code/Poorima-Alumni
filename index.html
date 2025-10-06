@@ -12,73 +12,105 @@
 <body>
 
   <header id="main-header">
-    
-    
-
     <div class="logo-container">
-      <div class="logo">
-        <img src="ic_PUAS_full (1).png" alt="Poornima University Logo" />
-      </div>
-      <div class="logo-text">Alumni Society</div>
+        <div class="logo">
+            <img src="ic_PUAS_full (1).png" alt="Poornima University Logo" />
+        </div>
+        <div class="logo-text">Alumni Society</div>
     </div>
 
     <nav class="alumni-nav">
-      <ul>
-        <li><a href="#home-content" class="active">Home</a></li>
-        <li><a href="#committee-content">Executive Committee</a></li>
-        <li><a href="#meet-content">Alumni Meet</a></li>
-        <li><a href="#contact-content">Contact</a></li>
-      </ul>
+        <ul>
+            <li><a href="#home-content" class="active">Home</a></li>
+            <li><a href="#committee-content">Executive Committee</a></li>
+            <li><a href="#meet-content">Events & Media</a></li>
+            <li><a href="#contact-content">Contact</a></li>
+        </ul>
     </nav>
 
-    <button id="menu-toggle" class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="header-actions">
+        
+        <div class="search-container">
+            <button id="search-toggle" class="header-icon-btn" title="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <input type="search" id="search-bar" class="search-bar" placeholder="Search...">
+        </div>
+        
+        <button id="theme-toggle" class="header-icon-btn" title="Toggle dark mode">
+            <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </button>
 
-    <button id="theme-toggle" title="Toggle dark mode">
-      <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="5"></circle>
-        <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-      </svg>
-      <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-      </svg>
-    </button>
-
-  </header>
+        <button id="menu-toggle" class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
 
   <main>
 
-    <section class="hero-section">
-      <div class="hero">
+    <!-- Replace your existing hero-section with this -->
+<section class="hero-section">
+  <div class="hero-container">
+    <!-- Image Frame -->
+    <div class="hero-image-frame">
+      <div class="hero-slider">
         <div class="slide active">
           <img src="mask.webp" alt="Alumni Meet" class="hero-img" />
         </div>
         <div class="slide">
-          <img src="standing.jpeg" alt="Alumni Group" class="hero-img" />
+          <img src="slider1.jpg" alt="Alumni Group" class="hero-img" />
         </div>
         <div class="slide">
           <img src="Screenshot_20250109-174705 (1).png" alt="Alumni Event" class="hero-img" />
         </div>
-        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="next" onclick="moveSlide(1)">&#10095;</button>
       </div>
       
-      <div class="hero-overlay"></div>
+      <!-- Navigation Arrows -->
+      <button class="hero-nav prev" onclick="moveSlide(-1)">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <button class="hero-nav next" onclick="moveSlide(1)">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
       
+      <!-- Slide Indicators -->
+      <div class="slide-indicators">
+        <span class="indicator active" onclick="goToSlide(0)"></span>
+        <span class="indicator" onclick="goToSlide(1)"></span>
+        <span class="indicator" onclick="goToSlide(2)"></span>
+      </div>
+    </div>
+    
+    <!-- Content Section -->
+    <div class="hero-content-wrapper">
       <div class="hero-content">
-        <h1 class="hero-title animate-on-scroll">Poornima University Alumni Society</h1>
-        <p class="hero-subtitle animate-on-scroll">Connecting graduates, fostering excellence, and building a legacy of success</p>
-        <button class="cta-button animate-on-scroll" onclick="document.getElementById('committee-content').scrollIntoView({behavior: 'smooth'})">
+        <h1 class="hero-title">Poornima University Alumni Society</h1>
+        <p class="hero-subtitle">Connecting graduates, fostering excellence, and building a legacy of success</p>
+        <a href="#committee-content" class="cta-button">
           Explore Our Community
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
-        </button>
+        </a>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section class="stats-bar">
       <div class="stat-item">
@@ -252,7 +284,7 @@
 <!-- Alumni Meet Section - Replace your existing #meet-content section with this -->
 <section id="meet-content" class="page-section">
   <div class="section-header animate-on-scroll">
-    <h2 class="section-title">Alumni Meet</h2>
+    <h2 class="section-title">Events & Media</h2>
     <p class="section-subtitle">Stay connected with your alma mater through our exciting events and gatherings</p>
   </div>
 
@@ -345,7 +377,7 @@
         </svg>
       </div>
       <div class="alumni-card-content">
-        <h3>Networking Events</h3>
+        <h3>Networking Group</h3>
         <p>Connect with fellow alumni across different industries and build meaningful professional relationships.</p>
         
         <div class="alumni-network-stats">
@@ -359,7 +391,7 @@
           </div>
         </div>
         
-        <button class="alumni-meet-btn" data-action="network">JOIN NETWORK</button>
+<button id="join-whatsapp-btn" class="alumni-meet-btn" data-action="network">JOIN NETWORK</button>
       </div>
     </div>
 

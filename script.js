@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let slideInterval = setInterval(() => moveSlide(1), 5000);
 
-    window.moveSlide = (n) => {
+    window.controlSlider = (n) => {
         moveSlide(n);
         clearInterval(slideInterval);
         slideInterval = setInterval(() => moveSlide(1), 5000);
@@ -2014,10 +2014,10 @@ document.addEventListener('DOMContentLoaded', () => {
             setupAlumniEventListeners();
             injectAlumniStyles();
             
-            console.log('Alumni Meet section initialized successfully!');
+            console.log('Welcome to Poornima University Alumni Society');
             
             setTimeout(() => {
-                alumniUtils.createNotification('Alumni Meet section loaded successfully!', 'success');
+                alumniUtils.createNotification('Welcome to Poornima University Alumni Society', 'success');
             }, 1000);
             
         } catch (error) {
@@ -2035,4 +2035,16 @@ document.addEventListener('DOMContentLoaded', () => {
             alumniVideo.closeVideo();
         }
     });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappBtn = document.getElementById('join-whatsapp-btn');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+            // Replace with your actual WhatsApp group invite link
+            const whatsappLink = 'https://chat.whatsapp.com/CyfcfL9rAfz8egq2U3winB?mode=ems_wa_t';
+            
+            // Opens the link in a new tab
+            window.open(whatsappLink, '_blank');
+        });
+    }
 });
