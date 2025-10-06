@@ -2816,3 +2816,402 @@ body.dark-theme .hero-subtitle {
     border: 1px solid #ccc;
   }
 }
+/* Header Actions - Make sure it's visible on mobile */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Theme Toggle Button - Critical Mobile Fixes */
+#theme-toggle {
+  background: rgba(30, 64, 175, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(30, 64, 175, 0.2);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex !important; /* Force display */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 1001;
+}
+
+#theme-toggle:hover {
+  background: rgba(30, 64, 175, 0.15);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.2);
+}
+
+#theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+/* Icon Toggle Logic */
+.moon {
+  display: none;
+}
+
+body.dark-theme .sun {
+  display: none;
+}
+
+body.dark-theme .moon {
+  display: block;
+}
+
+body.dark-theme #theme-toggle {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+body.dark-theme #theme-toggle svg {
+  stroke: #fbbf24;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#search-toggle {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.search-bar {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  height: 38px;
+  font-size: 0.9rem;
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translateY(-50%) scaleX(0);
+  transform-origin: right;
+  width: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar.active {
+  width: 200px;
+  padding: 8px 15px;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) scaleX(1);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 1001;
+  flex-shrink: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: var(--text-primary);
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transition: 0.25s ease-in-out;
+}
+
+.menu-toggle span:nth-child(1) { top: 0px; }
+.menu-toggle span:nth-child(2) { top: 9px; }
+.menu-toggle span:nth-child(3) { top: 18px; }
+
+.menu-toggle.active span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  left: -30px;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
+}
+
+/* Mobile Responsive - CRITICAL */
+@media (max-width: 768px) {
+  #main-header {
+    padding: 0 1rem;
+  }
+
+  .logo-text {
+    display: none; /* Hide text on mobile to save space */
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  /* Hide navigation on mobile */
+  .alumni-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    padding: 1rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .alumni-nav.active {
+    display: block;
+  }
+
+  .alumni-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  /* Show menu toggle on mobile */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Adjust header actions spacing */
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  /* Keep theme toggle visible and functional */
+  #theme-toggle {
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+  }
+
+  #theme-toggle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Adjust search on mobile */
+  .search-container {
+    display: none; /* Hide search on mobile to save space */
+  }
+}
+
+@media (max-width: 480px) {
+  #theme-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  #theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+}
+/* ========================================= */
+/* --- ENHANCED DARK THEME --- */
+/* ========================================= */
+
+/* Improved Dark Theme Variables */
+body.dark-theme {
+  --bg-primary: #0a0f1e;
+  --bg-secondary: #141b2d;
+  --bg-tertiary: #1e293b;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --glass-bg: rgba(20, 27, 45, 0.95);
+  --glass-border: rgba(148, 163, 184, 0.15);
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.6), 0 8px 10px -6px rgb(0 0 0 / 0.5);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.7);
+}
+
+/* Dark Theme Header */
+body.dark-theme #main-header {
+  background: rgba(10, 15, 30, 0.95);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Dark Theme Hero Section */
+body.dark-theme .hero-section {
+  background: linear-gradient(135deg, #0a0f1e 0%, #141b2d 100%);
+}
+
+body.dark-theme .hero-image-frame {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  box-shadow: 
+    0 20px 60px rgba(59, 130, 246, 0.4),
+    0 0 0 1px rgba(59, 130, 246, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Theme Cards */
+body.dark-theme .event-card,
+body.dark-theme .contact-card,
+body.dark-theme .alumni-meet-card {
+  background: linear-gradient(135deg, rgba(20, 27, 45, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .event-card:hover,
+body.dark-theme .contact-card:hover,
+body.dark-theme .alumni-meet-card:hover {
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Dark Theme Profile Images */
+body.dark-theme .event-card .card-image {
+  border: 4px solid #0a0f1e;
+}
+
+/* Dark Theme Stats Bar */
+body.dark-theme .stats-bar {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+}
+
+/* Dark Theme Overview Section */
+body.dark-theme #home-content .overview {
+  background: linear-gradient(135deg, rgba(20, 27, 45, 0.6) 0%, rgba(30, 41, 59, 0.6) 100%);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+/* Dark Theme Buttons */
+body.dark-theme .cta-button:hover,
+body.dark-theme .contact-btn:hover,
+body.dark-theme .alumni-meet-btn:hover {
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.5);
+}
+
+/* Dark Theme Interactive Elements */
+body.dark-theme .interactive-element,
+body.dark-theme .alumni-interactive-element {
+  background: #0a0f1e;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+body.dark-theme .element-header,
+body.dark-theme .alumni-element-header {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+}
+
+/* Dark Theme Forms */
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+  background: #141b2d;
+  border-color: rgba(148, 163, 184, 0.2);
+  color: #f1f5f9;
+}
+
+body.dark-theme .form-group input:focus,
+body.dark-theme .form-group textarea:focus {
+  background: #0a0f1e;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+body.dark-theme .form-group label {
+  color: #94a3b8;
+}
+
+body.dark-theme .form-group input:focus + label,
+body.dark-theme .form-group input:not(:placeholder-shown) + label,
+body.dark-theme .form-group textarea:focus + label,
+body.dark-theme .form-group textarea:not(:placeholder-shown) + label {
+  color: #60a5fa;
+  background: #0a0f1e;
+}
+
+/* Dark Theme Modal */
+body.dark-theme .contact-modal-content {
+  background: #0a0f1e;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Dark Theme Navigation */
+body.dark-theme .alumni-nav {
+  background: rgba(10, 15, 30, 0.98);
+}
+
+body.dark-theme .alumni-nav ul li a:hover {
+  background: rgba(59, 130, 246, 0.15);
+}
+
+/* Dark Theme Gallery */
+body.dark-theme .alumni-main-display,
+body.dark-theme #googleFormFrame {
+  background: #141b2d;
+}
+
+/* Dark Theme Featured Card */
+body.dark-theme .alumni-featured-card {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(251, 191, 36, 0.08) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Dark Theme Preview Boxes */
+body.dark-theme .alumni-gallery-preview,
+body.dark-theme .alumni-workshop-info,
+body.dark-theme .alumni-network-stats {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+/* Dark Theme Map Overlay */
+body.dark-theme .map-overlay {
+  background: rgba(10, 15, 30, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Smooth Dark Mode Transition */
+body,
+#main-header,
+.event-card,
+.contact-card,
+.alumni-meet-card,
+.overview,
+.interactive-element,
+.alumni-interactive-element {
+  transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
