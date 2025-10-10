@@ -949,7 +949,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Configuration
     const CONFIG = {
         // Replace with your actual Google Form URL
-        googleFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc_EXAMPLE_FORM_ID/viewform?embedded=true',
+        googleFormUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdrm1ndF-6aZsv2NJCbhlHMIB22aHsOXA3XBpHAZI9FqDwyVg/viewform?usp=sf_link',
         
         // Google Maps embed URL for Poornima University
         mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.8567889567!2d75.6876!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db5c1c06c3b4d%3A0x2b1f4f1c06c3b4d!2sPoornima%20University!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin',
@@ -962,6 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
         email: 'alumni@poornima.edu.in',
         address: 'IS-2027, Ramchandrapura, Jaipur, Rajasthan 302022'
     };
+    
 
     // DOM Elements
     const elements = {
@@ -1007,7 +1008,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             element.classList.remove('active');
             setTimeout(() => {
-                element.style.display = 'none';
+                element.removeAttribute('style'); 
                 if (callback) callback();
             }, 500);
         },
@@ -2048,3 +2049,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+    

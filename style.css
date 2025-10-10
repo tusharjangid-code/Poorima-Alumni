@@ -3215,3 +3215,6 @@ body,
 .alumni-interactive-element {
   transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
+body.dark-theme .logo img {
+  content: url('puas_white-logo.png');
+}
